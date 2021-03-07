@@ -1,5 +1,4 @@
 const pwEl = document.getElementById("pw");
-const copyEl = document.getElementById("copy");
 const lenEl = document.getElementById("len");
 const upperEl = document.getElementById("upper");
 const lowerEl = document.getElementById("lower");
@@ -78,6 +77,15 @@ function generateX() {
     if (xs.length === 0) return "";
 
     return xs[Math.floor(Math.random() * xs.length)];
+}
+
+var generateBtn = document.getElementById("generate");
+
+function writePassword() {
+  var password = generateX();
+  var passwordText = document.getElementById("generate");
+
+  passwordText.value = password;
 }
 
 generateEl.addEventListener("click", generatePassword);
