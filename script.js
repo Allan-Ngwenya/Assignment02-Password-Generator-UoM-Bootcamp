@@ -79,13 +79,15 @@ function generateX() {
     return xs[Math.floor(Math.random() * xs.length)];
 }
 
-var generateBtn = document.getElementById("generate");
-
-function writePassword() {
-  var password = generateX();
-  var passwordText = document.getElementById("generate");
-
-  passwordText.value = password;
-}
-
 generateEl.addEventListener("click", generatePassword);
+
+copyEl.addEventListener("click", () => {
+    const textarea = document.createElement("textarea");
+    const password = pwEl.innerText;
+
+    if (!password) {
+        return;
+    }
+
+var generateBtn = document.getElementById("generate");
+});
